@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>laravel 9 crud test</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -114,7 +114,10 @@
 
 
     <p><a href="{{ Route('reg.create') }}">Add a record</a></p>
+    <p><a href="/feedback">寄一封回饋信</a></p>
 
+    下方這個連結用->name('feedbackForm')
+    <p><a href="{{ Route('feedbackForm') }}">寄一封回饋信</a></p>
     <div class="card-body mb-5 ">
         {{ $Registers->appends(['search' => request()->search])->links('vendor.pagination.bootstrap-4') }}
     </div>

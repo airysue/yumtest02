@@ -20,3 +20,7 @@ Route::get('/', function () {
 
 Route::resource('reg', RegisterController::class); //註冊相關功能都放這路徑下
 Route::get('/search', 'App\Http\Controllers\RegisterController@search')->name('search');
+
+Route::get('/feedback', function () {
+  return view('feedback');
+})->name('feedbackForm'); //使用者輸入的表單內容
